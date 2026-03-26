@@ -12,7 +12,7 @@ public class ProductoRepository {
 
     private final List<producto> productos = new ArrayList<>();
 
-    private ProductoRepository () {
+    public ProductoRepository () {
         productos.add(new producto(1, "Coca-cola", 20, 100, "Bebida"));
         productos.add(new producto(2, "Pepsi", 18, 50, "Bebida"));
         productos.add(new producto(3, "Fanta", 15, 30, "Bebida"));

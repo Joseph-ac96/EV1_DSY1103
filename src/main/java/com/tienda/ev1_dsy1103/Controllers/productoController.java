@@ -15,16 +15,19 @@ import org.springframework.web.bind.annotation.RestController;
 import com.tienda.ev1_dsy1103.Models.producto;
 import com.tienda.ev1_dsy1103.Services.prooductoService;
 
+import lombok.RequiredArgsConstructor;
+
 
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("api/productos")
 public class productoController {
     
-    private prooductoService productoService;
+    private final prooductoService productoService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<producto> getProductoById(@PathVariable int id) {
+    public ResponseEntity<?> getProductoById(@PathVariable int id) {
         try {
             producto producto = productoService.getProductoById(id);
             if (producto == null) {

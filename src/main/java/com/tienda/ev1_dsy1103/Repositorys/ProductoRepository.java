@@ -10,7 +10,7 @@ import com.tienda.ev1_dsy1103.Models.producto;
 @Repository
 public class ProductoRepository {
 
-    private List<producto> productos = new ArrayList<>();
+    private final List<producto> productos = new ArrayList<>();
 
     private ProductoRepository () {
         productos.add(new producto(1, "Coca-cola", 20, 100, "Bebida"));
